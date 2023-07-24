@@ -2,6 +2,8 @@ const express=require('express');
 const app=express();
 const port=8000;
 const expressLayouts=require('express-ejs-layouts');
+//import this db 
+const db=require('./config/mongoose');
 
 //use static file 
 app.use(express.static('./assests'));
