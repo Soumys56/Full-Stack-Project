@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#fafafa;
+    font-family: 'Edu SA Beginner', cursive;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.part1 img{
+  height: 80vh;
+  background-color: transparent;
+}
+
+.part2{
+    border: 1px solid black;   
+     height: 570px;
+     width: 340px;
+     display: flex;
+     flex-direction: column;
+    
+     align-items: center;
+     padding: 1rem 0rem;
+}
+.heading{
+
+  font-family: 'Edu SA Beginner', cursive;
+  font-size: 20px;
+}
+.text{
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+.auth-button{
+    max-width: auto;
+    padding: 0.5rem 0rem;
+
+    
+
+}
+.auth-button> button{
+    padding: 0.2rem 1rem;
+}
+.auth-button> button> a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: sans-serif;
+    
+
+
+}
+
+.underline{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+     padding: 1rem 0rem;
+      
+    position: relative;
+    
+
+}
+.hr1{
+
+    position: absolute;
+    transform: rotate(-90deg);
+        border: 1px solid black;
+      
+       
+        height: 125px;
+        left: 19%;
+        top: -37%;
+}
+
+.hr2{
+    position: absolute;
+    transform: rotate(-90deg);
+        border: 1px solid black;
+        border: 0.5px solid black;
+    
+    height: 125px;
+    right: 19%;
+    top: -37%;
+}
+      
+
+.line{
+    width: 5px;
+    height: 3px;
+}
+.input-email{
+    padding: 1rem 0rem;
+}
+
+.input-name{
+    padding: 0.8rem 0rem;
+
+}
+.user{
+    padding: 0.8rem 0rem;
+}
+ input{
+    width: 250px;
+    height: 35px;
+    padding: 0rem 0.2rem;
+}
+.input-password{
+    padding: 0.8rem 0rem;
+
+}
+.signUp-button{
+    padding: 0.2rem 0rem;
+
+}
+.signUp-button button{
+    padding: 0.4rem 5rem;
+}
