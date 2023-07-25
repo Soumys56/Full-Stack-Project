@@ -1,9 +1,15 @@
 const express=require('express');
+//require cookie pareser for user
+const cookieParser=require('cookie-parser');
+
 const app=express();
 const port=8000;
 const expressLayouts=require('express-ejs-layouts');
 //import this db 
 const db=require('./config/mongoose');
+ app.use(express.urlencoded());
+
+
 
 //use static file 
 app.use(express.static('./assests'));
@@ -14,11 +20,12 @@ app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
 
 
-//use express router.this is a used as a middleware
-app.use('/',require('./router'));
+
 //set up the view engine
 app.set('view engine','ejs');
 app.set('views','./views');
+//use express router.this is a used as a middleware
+app.use('/',require('./router'));
 
 
 app.listen(port,function(err){
