@@ -5,6 +5,9 @@ module.exports.profile=function(req,res){
 module.exports.signUp=function (req,res) {
     return res.render('signup');
   }
+  module.exports.signIn=function(req,res){
+    return res.render('signIn');
+  }
   //get the signUp data
 
   module.exports.crete=async function(req,res){
@@ -19,6 +22,7 @@ module.exports.signUp=function (req,res) {
                const user=   await User.create(req.body)
                      if(user){
                         console.log('user crete sucessfully');
+                        return res.redirect('/users/signIn')
                      }
                      else{
                       console.log('error in creation a user');
@@ -26,7 +30,7 @@ module.exports.signUp=function (req,res) {
                      }
                  }
                  else{
-                  return res.redirect('/users/profile');
+                  return res.redirect('/users/signIn');
 
                  }
                
@@ -35,3 +39,6 @@ module.exports.signUp=function (req,res) {
              console.log(`Error:${err}`);
         }
   }
+module.exports.creteSession=async function(req,res){
+
+}

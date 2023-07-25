@@ -7,7 +7,10 @@ const port=8000;
 const expressLayouts=require('express-ejs-layouts');
 //import this db 
 const db=require('./config/mongoose');
+//npm install express-session ..for storing session cookie
+const session=require('express-session');
  app.use(express.urlencoded());
+ app.use(cookieParser());
 
 
 
