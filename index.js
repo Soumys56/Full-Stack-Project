@@ -13,7 +13,9 @@ const session=require('express-session');
 //passport require
 const passport=require('passport');
 const  passportLocal=require('./config/passport-local-stragey');
- app.use(express.urlencoded());
+const { Session } = require('express-session');
+ const MongoStore=require('connect-mongo');
+app.use(express.urlencoded());
 //  app.use(cookieParser());
 
 
@@ -32,7 +34,7 @@ app.set('layout extractScripts',true);
 app.set('view engine','ejs');
 app.set('views','./views');
 
-//use a middleware accept the seesion cookie encrypt it 
+//use a middleware accept the seesion cookie encrypt it and also used mongo store is used to store the session cookie in the db
 app.use(session({
     name:'Full Stack Project',
     //todo change before deployment in production mode
@@ -42,7 +44,13 @@ app.use(session({
     //here is the cookie expired this time
     cookie:{
         maxAge:(1000*60*100)
-    }
+    },
+    store:new MongoStore({
+        
+        mongoUrl:"mongodb://0.0.0.0/fullstackweb_development",
+         autoRemove:'disabled'
+    })
+
 
 
 
