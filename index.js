@@ -8,6 +8,7 @@ const expressLayouts=require('express-ejs-layouts');
 //import this db 
 const db=require('./config/mongoose');
  app.use(express.urlencoded());
+ app.use(cookieParser())
 
 
 
